@@ -1,0 +1,96 @@
+#menu__toggle {
+    display: none;
+}
+
+@media screen and (max-width: 678px) {
+
+    // скрываем чекбокс
+    
+    #menu__toggle {
+        opacity: 0;
+    }
+    
+    // стилизируем кнопку гамбургера
+    
+    .menu__btn {
+        width: 50px;
+        height: 50px;
+        display: block;
+        position: fixed;
+        right: 10px;
+    }
+    
+    // создаем палочки гамбургера через псевдоэлементы
+    
+    .menu__btn span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: sandybrown;
+        background-image: $radial-gradient;
+    }
+    
+    .menu__btn span::before,
+    .menu__btn span::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: $radial-gradient;
+        top: 10px;
+    }
+    
+    .menu__btn span::after {
+        //background: blue;
+        top: -10px;
+    }
+    
+    // изменяем положение палочек гамбургера по нажатию на чекбокс
+    
+    #menu__toggle:checked ~ .menu__btn span {
+        background: transparent;
+    }
+    
+    #menu__toggle:checked ~ .menu__btn span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    
+    #menu__toggle:checked ~ .menu__btn span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    
+    #menu__toggle:checked ~ .nav_list {
+        visibility: visible;
+        display: block;
+        left: 0;
+    }
+    
+    //стилизируем список навигации
+    
+    .nav_list {
+        display: block;
+        width: 45%;
+        height: 100%;
+        background-image: $linear-gradient;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        position: fixed;
+        padding-top: 35px;
+    }
+    
+    .nav_list li {
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .nav_list li a {
+        color: black;
+        padding: 20px;
+        font-weight: bold;
+    }
+}

@@ -319,7 +319,7 @@ summary {
 }
 
 body {
-  background-color: black;
+  background-color: #111111;
   color: white;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
@@ -412,7 +412,9 @@ body {
 }
 
 .header {
-  background-color: #111111;
+  background: #111111;
+  position: fixed;
+  width: 100%;
 }
 
 .header .container {
@@ -483,6 +485,66 @@ body {
   }
   .nav_list li a {
     font-size: 16px;
+  }
+}
+
+.hero {
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-size: 53px;
+  line-height: 1.04;
+  color: transparent;
+  background: radial-gradient(50% 50% at 50% 50%, #EB9038 0%, #F3C0C6 33.85%, #F3C3CF 66.67%, #8DC4F3 100%);
+  -webkit-background-clip: text;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 500px) {
+  .hero h1 {
+    font-size: 70px;
+  }
+}
+
+.hero-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-list li {
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 20px;
+  width: 220px;
+  height: 370px;
+}
+
+.hero-list img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1365px) {
+  .hero-list li {
+    margin-top: 0;
+  }
+  .hero-list li:nth-child(2),
+  .hero-list li:nth-child(4) {
+    margin-top: 32px;
+  }
+  .hero-list li:nth-child(3) {
+    margin-top: 72px;
   }
 }
 /*# sourceMappingURL=main.css.map */

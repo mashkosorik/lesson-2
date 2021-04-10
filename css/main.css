@@ -319,7 +319,6 @@ summary {
 }
 
 body {
-  background-color: #111111;
   color: white;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
@@ -327,6 +326,11 @@ body {
   line-height: 1;
   font-weight: normal;
   font-style: normal;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #menu__toggle {
@@ -489,7 +493,9 @@ body {
 }
 
 .hero {
+  background-color: #111111;
   padding-top: 100px;
+  padding-bottom: 120px;
 }
 
 .hero h1 {
@@ -504,6 +510,94 @@ body {
 @media screen and (min-width: 500px) {
   .hero h1 {
     font-size: 70px;
+  }
+}
+
+.hero .description {
+  padding: 0 10px;
+  font-size: 36px;
+  line-height: 1.62;
+  text-align: center;
+  color: transparent;
+  background: radial-gradient(50% 50% at 50% 50%, #EB9038 0%, #F3C0C6 33.85%, #F3C3CF 66.67%, #8DC4F3 100%);
+  -webkit-background-clip: text;
+}
+
+@media screen and (min-width: 500px) {
+  .hero .description {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero .description {
+    padding: 0 253px;
+  }
+}
+
+.hero .acces {
+  padding: 14px 24px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 1.08;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+  border: none;
+  color: #3D4853;
+  margin-bottom: 120px;
+  margin-top: 24px;
+}
+
+.hero .ticket-front {
+  margin-bottom: 96px;
+}
+
+@media screen and (min-width: 835px) {
+  .hero .ticket-front {
+    margin-left: calc(40% - 795px/2);
+  }
+}
+
+.hero .ticket-front,
+.hero .ticket-back {
+  width: 100%;
+  max-width: 795px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 13px;
+}
+
+.hero .ticket-front img,
+.hero .ticket-back img {
+  max-width: 795px;
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+}
+
+@media screen and (min-width: 530px) {
+  .hero .ticket-front,
+  .hero .ticket-back {
+    border-radius: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero .ticket-front,
+  .hero .ticket-back {
+    border-radius: 28px;
+  }
+}
+
+.hero .ticket-back {
+  text-align: right;
+}
+
+@media screen and (min-width: 835px) {
+  .hero .ticket-back {
+    margin-left: calc(60% - 795px/2);
   }
 }
 
@@ -546,5 +640,36 @@ body {
   .hero-list li:nth-child(3) {
     margin-top: 72px;
   }
+}
+
+.partners {
+  padding-bottom: 112px;
+  padding-top: 88px;
+}
+
+.partners h2 {
+  color: #111111;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.375;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.partners .partners-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

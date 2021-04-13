@@ -1,0 +1,33 @@
+
+.products {
+    padding: 232px 83px;
+    background-color: $black;
+    & .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    & .content {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        & h2 {
+            font-size: 72px;
+            line-height: 1.2;
+            margin-top: 16px;
+            margin-bottom: 31px;
+        }
+        .pretitle {
+            font-size: 12px;
+            line-height: 1.41;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        & .text {
+            font-size: 24px;
+            line-height: 1.5;
+            color: $gray;
+        }
+    }
+}

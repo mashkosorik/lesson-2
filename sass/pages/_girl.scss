@@ -1,36 +1,68 @@
+
 .girl {
-    padding: 153px 0;
-    padding-left: 96px;
-    background: $girl-back;
     position: relative;
+    background: $girl-back;
+    padding: 50px 20px;
+    //padding-left: 20px;
     & .wrapper {
-        width: 816px;
-        height: 587px;
+        max-width: 816px;
+        width: 100%;
+        & img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
     }
     & .content {
+        width: 90%;
+        max-width: 320px;
         position: absolute;
-        top: 22%;
+        top: 43%;
         bottom: 0;
-        left: 57%;
-        color: $black;
-        & h2 {
-            font-size: 72px;
-            line-height: 1.2;
-            margin-top: 12px;
-            margin-bottom: 121px;
-        }
+        left: 4%;
+        color: #1cc7c8;
         & .text {
-            font-size: 24px;
-            line-height: 1.5;
-        }
-        & .pretitle {
-            font-size: 12px;
-            line-height: 1.41;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 13px;
         }
     }
-
+    @media screen and (min-width: 560px) {
+        
+    }
+    @media screen and (min-width: 1440px) {
+        
+        padding: 153px 0;
+        padding-left: 96px;
+        background: $girl-back;
+        position: relative;
+        & .wrapper {
+            width: 816px;
+            height: 587px;
+        }
+        & .content {
+            position: absolute;
+            top: 22%;
+            bottom: 0;
+            left: 57%;
+            color: $black;
+            & h2 {
+                font-size: 72px;
+                line-height: 1.2;
+                margin-top: 12px;
+                margin-bottom: 121px;
+            }
+            & .text {
+                font-size: 24px;
+                line-height: 1.5;
+            }
+            & .pretitle {
+                font-size: 12px;
+                line-height: 1.41;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+        
+    }
 }
 
 

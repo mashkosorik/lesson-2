@@ -1,0 +1,42 @@
+.customized {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: $black;
+    & .container {
+        display: flex;
+        flex-flow: column;
+    }
+    & .pretitle {
+        font-size: 12px;
+        line-height: 1.41;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    & h2 {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 50px;
+    }
+    & .imgWrapper,
+    & .contentWrapper {
+        width: 100%;
+        max-width: 576px;
+        & img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        
+    }
+    @media screen and (min-width: 1440px) {
+        padding-top: 175px;
+        padding-bottom: 144px;
+        & h2 {
+            font-size: 72px;
+            margin-bottom: 71px;
+        }
+    }
+}

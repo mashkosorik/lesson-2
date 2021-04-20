@@ -1,0 +1,46 @@
+
+.girl-2 {
+    background: $dark-gray;
+    padding-top: 121px;
+    padding-bottom: 121px;
+    & .container {
+        display: flex;
+        justify-content: flex-end;
+        padding-right:148px;
+    }
+
+    & .contentWrapper {
+        position: absolute;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-start;
+        left: 94px;
+        z-index: 1;
+        & h3 {
+            font-size: 64px;
+            line-height: 1.2;
+            margin-bottom: 23px;
+        }
+        & button {
+            font-size: 13px;
+            line-height: 1.08;
+            text-transform: uppercase;
+            padding: 16px 24px;
+            color: $dark-gray;
+            background: $white;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+    & .imageWrapper {
+        position: relative;
+        right: 0;
+        padding-right: 54px;
+    }
+    & .rhombus {
+        position: absolute;
+        bottom: -65px;
+        right: 0;
+    }
+}

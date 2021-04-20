@@ -18,25 +18,96 @@
         line-height: 1.2;
         margin-bottom: 50px;
     }
+    & .wrappers {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
     & .imgWrapper,
     & .contentWrapper {
         width: 100%;
-        max-width: 576px;
+        max-width: 280px;
+        @media screen and (min-width: 678px) {
+            max-width: 576px;
+        }
+        & p {
+            font-size: 12px;
+            line-height: 1.5;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            @media screen and (min-width:1200px) {
+                margin-bottom: 96px;
+                font-size: 24px;
+            }
+        }
         & img {
             display: block;
             width: 100%;
             object-fit: cover;
         }
     }
+    & .costomized-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        & li {
+            display: flex;
+            flex-flow: column;
+            position: relative;
+            padding-top: 48px;
+            margin-bottom: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 100%;
+            max-width: 240px;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                left: 15px;
+                top: 0;
+            }
+            &:nth-child(1)::before {
+                background: $yellow;
+            }
+            &:nth-child(2)::before {
+                background: $blue; 
+            }
+            &:nth-child(3)::before {
+                background: $pink;
+            }
+            & h3 {
+                font-size: 18px;
+                line-height: 1.33;
+                margin-bottom: 24px;
+            }
+            & p {
+                font-size: 12px;
+                line-height: 1.62;
+            }
+        }
+    }
     @media screen and (min-width: 768px) {
         
     }
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1200px) {
         padding-top: 175px;
         padding-bottom: 144px;
         & h2 {
             font-size: 72px;
             margin-bottom: 71px;
+        }
+        & .costomized-list {
+            justify-content: space-between;
+            margin-top: 144px;
+            & li {
+                max-width: 380px;
+            }
+            & h3 {
+                font-size: 24px;
+            }
         }
     }
 }

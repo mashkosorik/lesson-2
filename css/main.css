@@ -864,10 +864,46 @@ img {
   margin-bottom: 50px;
 }
 
+.customized .wrappers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .customized .imgWrapper,
 .customized .contentWrapper {
   width: 100%;
-  max-width: 576px;
+  max-width: 280px;
+}
+
+@media screen and (min-width: 678px) {
+  .customized .imgWrapper,
+  .customized .contentWrapper {
+    max-width: 576px;
+  }
+}
+
+.customized .imgWrapper p,
+.customized .contentWrapper p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .customized .imgWrapper p,
+  .customized .contentWrapper p {
+    margin-bottom: 96px;
+    font-size: 24px;
+  }
 }
 
 .customized .imgWrapper img,
@@ -878,7 +914,70 @@ img {
      object-fit: cover;
 }
 
-@media screen and (min-width: 1440px) {
+.customized .costomized-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.customized .costomized-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  position: relative;
+  padding-top: 48px;
+  margin-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  max-width: 240px;
+}
+
+.customized .costomized-list li::before {
+  position: absolute;
+  content: "";
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  left: 15px;
+  top: 0;
+}
+
+.customized .costomized-list li:nth-child(1)::before {
+  background: #FCECDC;
+}
+
+.customized .costomized-list li:nth-child(2)::before {
+  background: #EAF4FC;
+}
+
+.customized .costomized-list li:nth-child(3)::before {
+  background: #FBEDF1;
+}
+
+.customized .costomized-list li h3 {
+  font-size: 18px;
+  line-height: 1.33;
+  margin-bottom: 24px;
+}
+
+.customized .costomized-list li p {
+  font-size: 12px;
+  line-height: 1.62;
+}
+
+@media screen and (min-width: 1200px) {
   .customized {
     padding-top: 175px;
     padding-bottom: 144px;
@@ -887,5 +986,81 @@ img {
     font-size: 72px;
     margin-bottom: 71px;
   }
+  .customized .costomized-list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 144px;
+  }
+  .customized .costomized-list li {
+    max-width: 380px;
+  }
+  .customized .costomized-list h3 {
+    font-size: 24px;
+  }
+}
+
+.girl-2 {
+  background: #3D4853;
+  padding-top: 121px;
+  padding-bottom: 121px;
+}
+
+.girl-2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 148px;
+}
+
+.girl-2 .contentWrapper {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  left: 94px;
+  z-index: 1;
+}
+
+.girl-2 .contentWrapper h3 {
+  font-size: 64px;
+  line-height: 1.2;
+  margin-bottom: 23px;
+}
+
+.girl-2 .contentWrapper button {
+  font-size: 13px;
+  line-height: 1.08;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  color: #3D4853;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+}
+
+.girl-2 .imageWrapper {
+  position: relative;
+  right: 0;
+  padding-right: 54px;
+}
+
+.girl-2 .rhombus {
+  position: absolute;
+  bottom: -65px;
+  right: 0;
 }
 /*# sourceMappingURL=main.css.map */

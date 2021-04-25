@@ -1,0 +1,69 @@
+
+.footer {
+    background: $dark-gray;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    & .container {
+        padding-left: 96px;
+        padding-right: 96px;
+    }
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    & h3 {
+        font-size: 14px;
+        line-height: 1.375;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $light-gray;
+    }
+    & ul {
+        margin-top: 36px;
+        & a {
+            color: inherit;
+            font-size: 14px;
+            line-height: 1;
+        }
+        & li:not(:last-child) {
+            margin-bottom: 18px;
+        }
+    }
+    & .follow {
+        & ul {
+            display: flex;
+            & li:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+    }
+    & .logoWrapper {
+        & p {
+            font-size: 14px;
+            line-height: 1.71;
+            color: $light-gray;
+            margin-top: 27px;
+        }
+    }
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    & .copyright {
+        font-size: 11px;
+        line-height: 2;
+    }
+    & .campaign {
+        font-size: 10px;
+        line-height: 1;
+        letter-spacing: 1.6px;
+        padding: 13px 17px ;
+        text-transform: uppercase;
+        background: transparent;
+        color: inherit;
+        border: 2px solid $light-gray;
+        border-radius: 5px;
+
+    } 
+}

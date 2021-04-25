@@ -493,6 +493,92 @@ img {
   }
 }
 
+.footer {
+  background: #3D4853;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.footer .container {
+  padding-left: 96px;
+  padding-right: 96px;
+}
+
+.footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.footer-top h3 {
+  font-size: 14px;
+  line-height: 1.375;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #BDCAD8;
+}
+
+.footer-top ul {
+  margin-top: 36px;
+}
+
+.footer-top ul a {
+  color: inherit;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.footer-top ul li:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.footer-top .follow ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-top .follow ul li:not(:last-child) {
+  margin-right: 16px;
+}
+
+.footer-top .logoWrapper p {
+  font-size: 14px;
+  line-height: 1.71;
+  color: #BDCAD8;
+  margin-top: 27px;
+}
+
+.footer-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-bottom .copyright {
+  font-size: 11px;
+  line-height: 2;
+}
+
+.footer-bottom .campaign {
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  padding: 13px 17px;
+  text-transform: uppercase;
+  background: transparent;
+  color: inherit;
+  border: 2px solid #BDCAD8;
+  border-radius: 5px;
+}
+
 .hero {
   background-color: #111111;
   padding-top: 100px;

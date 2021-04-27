@@ -500,18 +500,37 @@ img {
 }
 
 .footer .container {
-  padding-left: 96px;
-  padding-right: 96px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
 }
 
 .footer-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-bottom: 26px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-top {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .footer-top h3 {
@@ -546,6 +565,14 @@ img {
   margin-right: 16px;
 }
 
+.footer-top > div {
+  margin: 20px;
+}
+
+.footer-top .logoWrapper {
+  text-align: center;
+}
+
 .footer-top .logoWrapper p {
   font-size: 14px;
   line-height: 1.71;
@@ -557,9 +584,31 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.footer-bottom .item {
+  margin: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-bottom {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
 }
 
 .footer-bottom .copyright {
@@ -577,6 +626,23 @@ img {
   color: inherit;
   border: 2px solid #BDCAD8;
   border-radius: 5px;
+}
+
+.footer-bottom .new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #445260;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 2px 8px;
+  color: #FFFFFF;
+}
+
+.footer-bottom .new img {
+  margin-left: 5px;
 }
 
 .hero {
@@ -1099,7 +1165,12 @@ img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-right: 148px;
+}
+
+@media screen and (min-width: 1200px) {
+  .girl-2 .container {
+    padding-right: 148px;
+  }
 }
 
 .girl-2 .contentWrapper {
@@ -1117,14 +1188,26 @@ img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  left: 94px;
+  left: 20px;
   z-index: 1;
 }
 
+@media screen and (min-width: 768px) {
+  .girl-2 .contentWrapper {
+    left: 94px;
+  }
+}
+
 .girl-2 .contentWrapper h3 {
-  font-size: 64px;
+  font-size: 40px;
   line-height: 1.2;
   margin-bottom: 23px;
+}
+
+@media screen and (min-width: 768px) {
+  .girl-2 .contentWrapper h3 {
+    font-size: 64px;
+  }
 }
 
 .girl-2 .contentWrapper button {
@@ -1141,12 +1224,35 @@ img {
 .girl-2 .imageWrapper {
   position: relative;
   right: 0;
-  padding-right: 54px;
+  padding-right: 0;
+  width: 100%;
+  min-width: 300px;
 }
 
-.girl-2 .rhombus {
+.girl-2 .imageWrapper img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 560px) {
+  .girl-2 .imageWrapper {
+    padding-right: 54px;
+  }
+}
+
+.girl-2 .imageWrapper .rhombus {
   position: absolute;
   bottom: -65px;
   right: 0;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .girl-2 .imageWrapper .rhombus {
+    width: 100%;
+    max-width: 358px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

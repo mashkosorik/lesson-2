@@ -6,7 +6,10 @@
     & .container {
         display: flex;
         justify-content: flex-end;
-        padding-right:148px;
+        //padding-right: 20px;
+        @media screen and (min-width: 1200px) {
+            padding-right: 148px;
+        }
     }
 
     & .contentWrapper {
@@ -15,12 +18,18 @@
         flex-flow: column;
         justify-content: center;
         align-items: flex-start;
-        left: 94px;
+        left: 20px;
         z-index: 1;
+        @media screen and (min-width: 768px) {
+            left: 94px;
+        }
         & h3 {
-            font-size: 64px;
+            font-size: 40px;
             line-height: 1.2;
             margin-bottom: 23px;
+            @media screen and (min-width: 768px) {
+                font-size: 64px;
+            }
         }
         & button {
             font-size: 13px;
@@ -36,11 +45,27 @@
     & .imageWrapper {
         position: relative;
         right: 0;
-        padding-right: 54px;
-    }
-    & .rhombus {
-        position: absolute;
-        bottom: -65px;
-        right: 0;
+        padding-right: 0;
+        width: 100%;
+        min-width: 300px;
+        & img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+        @media screen and (min-width: 560px) {
+            padding-right: 54px;
+        }
+        & .rhombus {
+            position: absolute;
+            bottom: -65px;
+            right: 0;
+            width: 50%;
+            @media screen and (min-width: 768px) {
+                width: 100%;
+                max-width: 358px;
+
+            }
+        }
     }
 }

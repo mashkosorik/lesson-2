@@ -4,14 +4,22 @@
     padding-top: 64px;
     padding-bottom: 64px;
     & .container {
-        padding-left: 96px;
-        padding-right: 96px;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media screen and (min-width: 1200px) {
+            padding-left: 96px;
+            padding-right: 96px;
+        }
     }
 }
 .footer-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 26px;
+    flex-flow: row wrap;
+    @media screen and (min-width: 768px) {
+        justify-content: space-between;
+    }
     & h3 {
         font-size: 14px;
         line-height: 1.375;
@@ -38,7 +46,11 @@
             }
         }
     }
+    &>div {
+        margin: 20px;
+    }
     & .logoWrapper {
+        text-align: center;
         & p {
             font-size: 14px;
             line-height: 1.71;
@@ -49,7 +61,16 @@
 }
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    & .item {
+        margin: 30px;
+    }
+    @media screen and (min-width: 768px) {
+        justify-content: space-between;
+        align-items: end;
+    }
     & .copyright {
         font-size: 11px;
         line-height: 2;
@@ -64,6 +85,18 @@
         color: inherit;
         border: 2px solid $light-gray;
         border-radius: 5px;
-
-    } 
+    }
+    & .new {
+        display: flex;
+        background: $footer-botton;
+        border-radius: 8px;
+        border: none;
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 2px 8px;
+        color: $white;
+        & img {
+            margin-left: 5px;
+        }
+    }
 }
